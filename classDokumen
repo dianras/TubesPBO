@@ -1,0 +1,49 @@
+public class Dokumen {
+    private String id;
+    private String jenis;
+    private String namaFile;
+    private String tanggalUpload;
+
+    public Dokumen(String id, String jenis, String namaFile, String tanggalUpload) {
+        this.id = id;
+        this.jenis = jenis;
+        this.namaFile = namaFile;
+        this.tanggalUpload = tanggalUpload;
+    }
+    
+    public void gantiFile(String namaFileBaru){
+        this.namaFile = namaFileBaru;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getJenis() {
+        return jenis;
+    }
+
+    public void setJenis(String jenis) {
+        this.jenis = jenis;
+    }
+
+    public String getNamaFile() {
+        return namaFile;
+    }
+
+    public void setNamaFile(String namaFile) {
+        this.namaFile = namaFile;
+    }
+
+    public String getTanggalUpload() {
+        return tanggalUpload;
+    }
+
+    public void setTanggalUpload(String tanggalUpload) {
+        this.tanggalUpload = tanggalUpload;
+    }
+}
