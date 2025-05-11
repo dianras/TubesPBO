@@ -1,0 +1,45 @@
+public class RiwayatPenghuni {
+    private String id;
+    private Kos kos;
+    private String tanggalMasuk;
+    private String tanggalKeluar;
+
+    public RiwayatPenghuni(String id, Kos kos, String tanggalMasuk, String tanggalKeluar) {
+        this.id = id;
+        this.kos = kos;
+        this.tanggalMasuk = tanggalMasuk;
+        this.tanggalKeluar = tanggalKeluar;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Kos getKos() {
+        return kos;
+    }
+
+    public void setKos(Kos kos) {
+        this.kos = kos;
+    }
+
+    public String getTanggalMasuk() {
+        return tanggalMasuk;
+    }
+
+    public void setTanggalMasuk(String tanggalMasuk) {
+        this.tanggalMasuk = tanggalMasuk;
+    }
+
+    public String getTanggalKeluar() {
+        return tanggalKeluar;
+    }
+
+    public void setTanggalKeluar(String tanggalKeluar) {
+        this.tanggalKeluar = tanggalKeluar;
+    }
+}
