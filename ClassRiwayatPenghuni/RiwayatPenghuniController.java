@@ -9,36 +9,24 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- *
- * @author Rilda Dwi Febrianda
- */
 @RestController
-@RequestMapping("/riwayat")
+@RequestMapping(path = "api/riwayatpenghuni")
 public class RiwayatPenghuniController {
 
+    private final RiwayatPenghuniService service;
+
     @Autowired
-    private RiwayatPenghuniRepository riwayatRepo;
+    public RiwayatPenghuniController(RiwayatPenghuniService service) {
+        this.service = service;
+    }
 
     @GetMapping
-    public List<RiwayatPenghuni> getAll() {
-        return riwayatRepo.findAll();
+    public List<RiwayatPenghuni> getRiwayat() {
+        return service.getRiwayat();
     }
 
     @PostMapping
-    public RiwayatPenghuni create(@RequestBody RiwayatPenghuni r) {
-        return riwayatRepo.save(r);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<RiwayatPenghuni> getById(@PathVariable String id) {
-        return riwayatRepo.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id) {
-        riwayatRepo.deleteById(id);
+    public void addNewRiwayat(@RequestBody RiwayatPenghuni riwayat) {
+        service.addNewRiwayat(riwayat);
     }
 }

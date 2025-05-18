@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ClassRiwayatPenghuni;
 
 import jakarta.persistence.*;
@@ -53,5 +57,15 @@ public class RiwayatPenghuni {
 
     public void setTanggalKeluar(String tanggalKeluar) {
         this.tanggalKeluar = tanggalKeluar;
+    }
+    
+    @Override
+    public String toString(){
+        return "RiwayatPenghuni{" +
+                "id=" + id + '\'' +
+                ", kos=" + kos +
+                ", tanggalMasuk=" + tanggalMasuk +
+                ", tanggalKeluar=" + tanggalKeluar +
+                '}';
     }
 }
